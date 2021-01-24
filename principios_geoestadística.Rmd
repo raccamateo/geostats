@@ -27,9 +27,20 @@ En 1970, Tobler busca resolver problemas del crecimiento urbano en Detroit y ret
 
 Basado en los conceptos de la autocorrelación espacial, el proceso de Espaciaalización permite generar estructuras de datos espaciales con cobertura continua a partir de datos espacialmente discontinuos o discretos mediante interpolación espacial. Es decir, puntos aislados de dimensión cero son llevados a dos dimensiones.
 
-## Interpolación Espacial
+# Interpolación Espacial
 
 Es uno de los procesos de espacialización en el que se observa un fenómeno Z en un número limitado de lugares X (puntos muestreales o de observación/registro). Sirve para conocer el valor de una propiedad en cierta superficie. 
 
 Hay diferencias entre los principios de la estadística tradicional y la geoestadística. Mientras que el enfoque clásico utiliza muestreos aleatorios para estimar parámetros de la población, en geoestadística ya existen valores reales (lo que se mide u observa) que consideran e incorporan características y a su vez tienen aleatoriedad y cumplen con el principio de autocorrelación. Trata de inferir aquello que se desconoce en base a lo mencionado recién.
 
+Todos los métodos de predicción local pueden ser vistos como algún tipo de promedio ponderado:
+
+![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png)
+
+# Métodos de interpolación
+ 
+ Pueden ser:
+ *Exactos, cuando los valores medidos forman parte de la solución.
+ Inexactos o estimados, cuando los valores medidos no forman parte de la solución.
+ 
+ A continuación se explicarán los métodos más comunes.
