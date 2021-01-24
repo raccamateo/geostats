@@ -1,0 +1,29 @@
+---
+title: "Principios de Geoestadística"
+author: "Mateo W. Racca"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Autocorrelación Espacial
+
+En general, cosas que están próximas son similares entre sí. Esto fue postulado por Fisher en 1935, al observar que lotes próximos tenían rendimientos más similares que aquellos que estaban alejados. Fue el primero en aplicar conceptos de autocorrelación espacial para la siembra de ensayos, aunque no se hablaba de desagregar por proximidad o si era por otros factores.
+
+En 1970, Tobler busca resolver problemas del crecimiento urbano en Detroit y retoma las ideas de Fisher para analizar la expansión en lugares urbanos próximos. La Primera Ley de Tobler postula que todo está relacionado con todo, pero que las cosas más cercanas están más relacionadas que las distantes.
+
+# Espacialización
+
+Basado en los conceptos de la autocorrelación espacial, el proceso de Espaciaalización permite generar estructuras de datos espaciales con cobertura continua a partir de datos espacialmente discontinuos o discretos mediante interpolación espacial. Es decir, puntos aislados de dimensión cero son llevados a dos dimensiones.
+
+# Interpolación Espacial
+
+Es uno de los procesos de espacialización en el que se observa un fenómeno Z en un número limitado de lugares X (puntos muestreales o de observación/registro). Sirve para conocer el valor de una propiedad en cierta superficie. 
+
+Hay diferencias entre los principios de la estadística tradicional y la geoestadística. Mientras que el enfoque clásico utiliza muestreos aleatorios para estimar parámetros de la población, en geoestadística ya existen valores reales (lo que se mide u observa) que consideran e incorporan características y a su vez tienen aleatoriedad y cumplen con el principio de autocorrelación.
