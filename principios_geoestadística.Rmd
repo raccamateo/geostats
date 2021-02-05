@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Se ocupa de la modelización, predicción y simulación de fenómenos continuos en el espacio utilizando un método de interpolación espacial que considera la estructura espacial de estos fenómenos, llamado Kriging.
 Ya que la geoestadística solo se limita a este enfoque, al abordar otros métodos de interpolación sería conveniente hablar de Estadística Espacial.
+
 Esta pequeña guía se basa en Geostatistics for Environmental Scientists, de Richard Webster y Margaret A. Oliver (DOI:10.1002/9780470517277) y en apuntes de clases del posgrado en Big Data y Desarrollo Territorial de FLACSO Argentina (2020).
 
 ## Autocorrelación Espacial
@@ -66,3 +67,15 @@ La división de la región es a través de bisectores perpendiculares (líneas) 
 En este tipo de interpolación, todo lo que corresponde a un polígono toma el/los valor/es del punto generador. Los polígonos que comparten borde, son llamados *vecinos*. 
 
 Otra característica es que los polígonos llenan completamente el espacio sin superposición. Es un interpolador exacto, lo que quiere decir que no hay estimación de error y que no se usa información de lugares vecinos.
+
+### Triangulación de Delaunay o Teselado de Dirichlet
+
+Es un diagrama dual de los Polígonos de Voronoi, se construyen uniendo pares de puntos generadores de aquellos polígonos que comparten los mismos bordes. Acá sí importan los vecinos.
+
+
+<center>
+![Hferee, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons](https://raw.githubusercontent.com/raccamateo/geostats/main/2.png){width=25%}
+</center>
+  
+  
+  
