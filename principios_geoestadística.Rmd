@@ -34,3 +34,18 @@ Es uno de los procesos de espacialización en el que se observa un fenómeno Z e
 Hay diferencias entre los principios de la estadística tradicional y la geoestadística. Mientras que el enfoque clásico utiliza muestreos aleatorios para estimar parámetros de la población, en geoestadística ya existen valores reales (lo que se mide u observa) que consideran e incorporan características y a su vez tienen aleatoriedad y cumplen con el principio de autocorrelación. Trata de inferir aquello que se desconoce en base a lo mencionado recién.
 
 Todos los métodos de predicción local pueden ser vistos como algún tipo de promedio ponderado:
+
+<center>
+![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png){width=25%}
+</center>
+
+
+## Métodos de interpolación
+ 
+ Pueden ser:
+ 
+ * ***Exactos***, cuando los valores medidos forman parte de la solución.
+ 
+ * ***Inexactos*** o estimados, cuando los valores medidos no forman parte de la solución.
+ 
+ A continuación se explicarán los métodos más comunes.
