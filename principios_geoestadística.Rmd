@@ -49,3 +49,15 @@ Todos los métodos de predicción local pueden ser vistos como algún tipo de pr
  * ***Inexactos*** o estimados, cuando los valores medidos no forman parte de la solución.
  
  A continuación se explicarán los métodos más comunes.
+ 
+ ### Polígonos de Voronoi o Thiessen
+
+Hay una serie *N* de puntos generadores *z* que dividen una región en *N* polígonos o teselas *V*, esto quiere decir que hay tantos polígonos como puntos generadores. 
+
+La división de la región es a través de bisectores perpendiculares (líneas) que se forman al calcular las distancias entre puntos. Estas particiones dividen el espacio entre puntos generadores, y como resultado el espacio interno de estos polígonos contiene todos los puntos cuya distancia al punto generador es menor que la distancia a cualquier otro punto externo.
+
+
+<center>
+![By Balu Ertl - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=38534275](https://raw.githubusercontent.com/raccamateo/geostats/main/1.png){width=30%}
+</center>
+
