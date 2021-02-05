@@ -61,3 +61,7 @@ La división de la región es a través de bisectores perpendiculares (líneas) 
 ![By Balu Ertl - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=38534275](https://raw.githubusercontent.com/raccamateo/geostats/main/1.png){width=30%}
 </center>
 
+
+En este tipo de interpolación, todo lo que corresponde a un polígono toma el/los valor/es del punto generador. Los polígonos que comparten borde, son llamados *vecinos*. 
+
+Otra característica es que los polígonos llenan completamente el espacio sin superposición. Es un interpolador exacto, lo que quiere decir que no hay estimación de error y que no se usa información de lugares vecinos.
