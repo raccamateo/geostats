@@ -97,6 +97,10 @@ La proporción de áreas de intersección con los polígonos originales se usa p
 
 <center>
 ![Markluffel, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons](https://raw.githubusercontent.com/raccamateo/geostats/main/3.png){width=25%}
-  
+ </center>
+
+
+Es también un interpolador exacto, por lo que no hay medida de error. Permite lograr gradientes suaves. Incorpora información sobre el vecindario pero no usa puntos lejanos, necesita que los datos no sean ruidosos, es decir que no funciona bien cuando hay muchas variaciones.
+ 
   
   
