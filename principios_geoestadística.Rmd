@@ -101,6 +101,17 @@ La proporción de áreas de intersección con los polígonos originales se usa p
 
 
 Es también un interpolador exacto, por lo que no hay medida de error. Permite lograr gradientes suaves. Incorpora información sobre el vecindario pero no usa puntos lejanos, necesita que los datos no sean ruidosos, es decir que no funciona bien cuando hay muchas variaciones.
+
+
+### Distancia Inversa Ponderada (IDW)
+
+Cada punto tiene influencia local que disminuye con la distancia. 
+
+
+<center>
+![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/4.png){width=30%}
+</center>
+
  
   
   
