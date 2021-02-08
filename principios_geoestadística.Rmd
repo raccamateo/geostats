@@ -112,6 +112,12 @@ Cada punto tiene influencia local que disminuye con la distancia.
 ![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/4.png){width=30%}
 </center>
 
- 
+
+El valor a predecir se calcula usando una combinación lineal ponderada de los vectores muestreados. A mayor proximidad al lugar a predecir, mayor peso tendran los puntos vecinos.
+
+
+<center>
+![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/5.png){width=25%}
+</center>
   
   
