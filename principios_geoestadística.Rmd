@@ -120,4 +120,20 @@ El valor a predecir se calcula usando una combinación lineal ponderada de los v
 ![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/5.png){width=25%}
 </center>
   
+
+Ahora vamos a la ecuación que nos permite calcular superficies usando IDW y a un gráfico de ejemplo sobre cómo se ajusta según puntos muestrales:
+
+
+<center>
+![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/6.png){width=40%}
+</center>
+
+
+Cuando *x0* coincide con cualquier *xi*, el peso *λ* se hace infinito y entonces se le asigna el valor de *xi*.
+
+Para obtener mínimos y máximos a través del gradiente, necesitamos que los lugares tengan valores. En todos los casos en los que no hay datos, el gradiente no puede ser calculado, por lo que su valor es 0.
+
+Es un interpolador exacto en el que la elección del exponente (β) es arbitraria. No se tiene en cuenta la configuración espacial de las muestras.
+
+Este método es usado cuando el conjunto de puntos muestrales es denso y captura la extensión de la variación de la superficie.
   
