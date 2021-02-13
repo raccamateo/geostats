@@ -143,3 +143,11 @@ TERMINAR
 ### Splines o curvas adaptativas
 
 Se interpola localmente con ponlinomios usando puntos de valores conocidos. El objetivo es minimizar la curvatura general de la superficie a estimar. Es ampliamente usado para generar superficies con variaciones leves, como superficies de elevación o de concentraciones de contaminación.
+
+Los puntos de unión entre curvas son llamados nudos o knots. 
+
+Tipos de Spline:
+
+* ***Regularized o Regularizado***, cuando el objetivo es lograr una superficie suave y las curvas toman valores que pueden estar fuera del rango de los datos de muestra.
+
+
