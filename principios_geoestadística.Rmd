@@ -153,3 +153,6 @@ Tipos de Spline:
  * ***Tension o de Tensión***: se busca controlar la rigidez de la superficie en función del caracter de lo que modelamos. Crea una superficie menos suave con valores más restringidos por el rango de datos de la muestra.
 
 
+<center>
+![https://www.neonscience.org/resources/learning-hub/tutorials/spatial-interpolation-basics](https://raw.githubusercontent.com/raccamateo/geostats/main/7.png){width=40%}
+</center>
