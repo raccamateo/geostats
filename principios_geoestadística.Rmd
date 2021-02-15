@@ -148,6 +148,8 @@ Los puntos de unión entre curvas son llamados nudos o knots.
 
 Tipos de Spline:
 
-* ***Regularized o Regularizado***, cuando el objetivo es lograr una superficie suave y las curvas toman valores que pueden estar fuera del rango de los datos de muestra.
+* ***Regularized o Regularizado***: el objetivo es lograr una superficie suave y las curvas toman valores que pueden estar fuera del rango de los datos de muestra.
+ 
+ * ***Tension o de Tensión***: se busca controlar la rigidez de la superficie en función del caracter de lo que modelamos. Crea una superficie menos suave con valores más restringidos por el rango de datos de la muestra.
 
 
