@@ -38,7 +38,7 @@ Es uno de los procesos de espacialización en el que se observa un fenómeno Z e
 
 Hay diferencias entre los principios de la estadística tradicional y la geoestadística. Mientras que el enfoque clásico utiliza muestreos aleatorios para estimar parámetros de la población, en geoestadística ya existen valores reales (lo que se mide u observa) que consideran e incorporan características y a su vez tienen aleatoriedad y cumplen con el principio de autocorrelación. Trata de inferir aquello que se desconoce en base a lo mencionado recién.
 
-Todos los métodos de predicción local pueden ser vistos como algún tipo de promedio ponderado:
+Todos los métodos de predicción local pueden ser vistos como algún tipo de promedio ponderado donde:
 
 
 <center>
@@ -158,6 +158,7 @@ Tipos de Spline:
 </center>
 
 
-Spline es bueno para estimar valores fuera del rango de puntos muestrales y para crear superficies suaves y continuas.
+Spline es bueno para estimar valores fuera del rango de puntos muestrales y para crear superficies suaves y continuas, pero no es bueno para trabajar con puntos cercanos que tienen valores muy distintos entre sí. Los cálculos de pendientes pueden generar sobreestimación o subestimación. 
 
-Spline no es bueno para trabajar con puntos cercanos que tienen valores muy distintos entre sí. Los cálculos de pendientes pueden generar sobreestimación o subestimación. 
+
+### Kriging
