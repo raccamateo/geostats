@@ -156,3 +156,8 @@ Tipos de Spline:
 <center>
 ![https://www.neonscience.org/resources/learning-hub/tutorials/spatial-interpolation-basics](https://raw.githubusercontent.com/raccamateo/geostats/main/7.png){width=40%}
 </center>
+
+
+Spline es bueno para estimar valores fuera del rango de puntos muestrales y para crear superficies suaves y continuas.
+
+Spline no es bueno para trabajar con puntos cercanos que tienen valores muy distintos entre sí. Los cálculos de pendientes pueden generar sobreestimación o subestimación. 
