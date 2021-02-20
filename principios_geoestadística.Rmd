@@ -162,3 +162,14 @@ Spline es bueno para estimar valores fuera del rango de puntos muestrales y para
 
 
 ### Kriging
+
+Este método calcula la estructura de variación espacial a partir de muestras dispersas en el espacio. Genera una superficie estimada, es decir una variable regionalizada y una superficie de error.
+
+
+<center>
+![https://acolita.com/geoestadistica-interpolacion-con-kriging/](https://raw.githubusercontent.com/raccamateo/geostats/main/8.png)
+</center>
+
+
+
+
