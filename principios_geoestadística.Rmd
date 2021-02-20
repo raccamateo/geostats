@@ -171,5 +171,11 @@ Este método calcula la estructura de variación espacial a partir de muestras d
 </center>
 
 
+Kriging calcula la variación de una variable asumiendo que la media no tiene grandes variaciones, entonces necesita conocer la varianza de los datos. Para conocer esto se calcula la semivarianza **y** que describe el patron de variabilidad espacial entre pares de puntos a distintos intervalos de distancia:
+
+
+<center>
+![Diapositivas de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/9.png)
+</center>
 
 
