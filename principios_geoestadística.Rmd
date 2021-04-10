@@ -185,7 +185,24 @@ El objetivo del semivariograma es mostrar que a partir de cierto valor de distan
 
 La distancia a la que el modelo se estabiliza se denomina **rango** o **range**. Los puntos muestrales separados por distancias más cortas que el rango están autocorrelacionadas espacialmente, mientras que los más alejados que el rango no lo están.
 
-
 El valor de variación máxima se llama **meseta** o **sill (C1)**.
 
-Los datos siempre pueden presentar errores o haber sido medidos con sesgo. 
+Los datos siempre pueden presentar errores o haber sido medidos con sesgo. El semivariograma muestra los valores máximos de distancia hasta donde se verifica la correlación espacial y hasta los que podemos interpolar.
+
+El uso de Kriging significa una investigación interactiva del comportamiento espacial de la variable de interés a través del análisis de semivariogramas. Nos permite identificar el mejor método de estimación para generar la superficie de salida.
+
+
+**Ventajas del Kriging:** 
+* Nos brinda una superficie de error para las estimaciones.
+* Se pueden interpolar datos de variables con continuidad espacial desconocida.
+
+**Desventajas del Kriging:**
+* Las superficies generadas pueden ser excesivamente suaves.
+* Aunque estima la precisión, puede no reflejar con fidelidad  la distribución espacial del proceso, en especial cuando se esperan quiebres o discontinuidades.
+
+
+## Dependencia espacial y Autocorrelación
+
+Los modelos de regresión se construyen sobre el supuesto de que los valores de la variable dependiente son intependientes. Las variables que muestran autocorrelación espacial violan este supuesto y los modelos con estas variables tienen sesgo e invalidez estadística ya que subestiman o sobreestiman la importancia de las relaciones entre variables.
+
+
