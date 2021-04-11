@@ -42,7 +42,7 @@ Todos los métodos de predicción local pueden ser vistos como algún tipo de pr
 
 
 <center>
-![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png){width=25%}
+![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png){width=65%}
 </center>
 
 
@@ -206,3 +206,36 @@ El uso de Kriging significa una investigación interactiva del comportamiento es
 Los modelos de regresión se construyen sobre el supuesto de que los valores de la variable dependiente son intependientes. Las variables que muestran autocorrelación espacial violan este supuesto y los modelos con estas variables tienen sesgo e invalidez estadística ya que subestiman o sobreestiman la importancia de las relaciones entre variables.
 
 
+### Asociación espacial
+
+Describe cómo las localizaciones y sus atributos varían espacialmente. Involucra los conceptos de dependendencia espacial, interacción espacial (flujos de relaciones e interacciones) y agrupamiento espacial.
+
+Las medidas de autocorrelación espacial describen y evalúan el grado de similitud de atributos entre observaciones cercanas en una región particular.
+
+
+### Valores agrupados o conglomerados
+
+Si hay autocorrelación espacial positiva, los lugares vecinos toman valores similares. Esto forma conglomerados o clústeres espaciales en los que estos los lugares se agrupan y toman valores similares. 
+
+<center>
+![https://gisgeography.com/spatial-autocorrelation-moran-i-gis/](https://raw.githubusercontent.com/raccamateo/geostats/main/10.png)
+</center>
+
+Cuando decimos "lugares", esto quiere decir que pueden ser tanto polígonos, como puntos, áreas, etc.
+
+
+### Valores dispersos
+
+Cuando los lugares vecinos tienen valores muy deferentes, se dice que están dispersos. Esto significa que hay autocorrelación espacial negativa.
+
+<center>
+![https://gisgeography.com/spatial-autocorrelation-moran-i-gis/](https://raw.githubusercontent.com/raccamateo/geostats/main/11.png)
+</center>
+
+
+### Valores aleatorios
+
+Cuando el fenómeno se comporta de manera aleatoria y no se identifica un patrón definido espacialmente, se dice que no existe autocorrelación espacial. 
+
+
+### Estructura del vecindario
