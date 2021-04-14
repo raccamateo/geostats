@@ -239,3 +239,30 @@ Cuando el fenómeno se comporta de manera aleatoria y no se identifica un patró
 
 
 ### Estructura del vecindario
+
+
+La proximidad espacial de los lugares es capturada por una matriz de pesos espaciales que tiene dos criterios básicos: *distancia* y *continuidad física* o *adyacencia topológica*.
+
+La fórmula utilizada es: W = w<sub>ij</sub>
+
+Otro criterio posible es ponderar vecinos de distinto orden.
+
+
+### Vecinos por distancia
+
+Es el más simple de encontrar y aplicar. Con un punto se define un radio de búsqueda (por lado o por diagonales) y se buscan vecinos. Un ejemplo es el siguiente:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/12.png){width=75%}
+</center>
+
+
+### Vecinos por contigüidad  
+
+Se considera vecinos de primer orden a los contiguos a nuestro punto central a partir del cual definimos el radio de búsqueda. Los vecinos de segundo orden son aquellos vecinos a los de primer orden.
+
+A continuación podemos ver los criterios de selección de vecinos por contigüidad:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/13.png)
+</center>
