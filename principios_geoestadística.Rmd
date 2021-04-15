@@ -266,3 +266,25 @@ A continuación podemos ver los criterios de selección de vecinos por contigüi
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/13.png)
 </center>
+
+En general, al trabajar con polígonos el criterio utilizado es el llamado reina o queen en el que se busca por anillos y se consideran todas las direcciones posibles de vecindad.
+
+Difiere del criterio por distancia ya que no pondera todo lo que está dentro de un radio sino por niveles de proximidad (órdenes).
+
+
+### Matrices de pesos
+
+Pueden utilizarse para representar, por ejemplo, vecindarios. Las unidades tienen que tener identificadores únicos.
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/14.png){width=50%}
+</center>
+
+
+La matriz es simétrica y su diagonal principal se conforma de ceros ya que cada unidad no puede ser vecina de sí misma.
+
+Los pesos de las matrices pueden ser binarios o estandarizados. Un ejemplo de ambos casos: 
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/15.png)
+</center>
+
