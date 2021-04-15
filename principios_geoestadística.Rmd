@@ -288,3 +288,22 @@ Los pesos de las matrices pueden ser binarios o estandarizados. Un ejemplo de am
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/15.png)
 </center>
 
+
+## Medidas de autocorrelación espacial
+
+Las medidas de autocorrelación espacial pueden ser globales o locales (LISA). A continuación vamos a verlas en profundidad.
+
+
+### Globales
+
+Las medidas globales no consideran la heterogeneidad espacial, esto quiere decir que nos brindan un único valor que define si hay autocorrelación o no, sin detalles. Asume que un mismo proceso o patrón se da en toda el área. No especifica dónde se encuentra la similitud o disimilitud de valores.
+
+
+### Locales (LISA)
+
+Consideran la heterogeneidad espacial, asume que puede haber patrones o procesos diferentes en distintos lugares un mismo área.
+Nos permite contar con medidas de variación local y se asignan medidas de a utocorrelación a cada unidad de análisis. Podemos identificar subzonas en las que se presenta agrupamiento o dispersión en relación a los vecinos.
+Las medidas locales suelen estandarizarse para permitir comparaciones.
+
+
+### Índice de Morán - I Global
