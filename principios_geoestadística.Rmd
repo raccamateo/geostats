@@ -307,3 +307,18 @@ Las medidas locales suelen estandarizarse para permitir comparaciones.
 
 
 ### Índice de Morán - I Global
+
+Es un índice de correlación, ya que trabaja con la covarianza ponderada sobre la varianza de los pesos espaciales y cuya fórmula es:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/16.png){width=65%}
+</center>
+
+ Dónde *N* es el número de unidades de análisis y *W* la suma de los pesos.
+ 
+ No se considera el valor de la unidad central, solo se interesa en la relación entre vecinos ya que cuando no existe el producto da 0. Esta medida depende del criterio de vecindad aplicado en cada caso particular, por lo que no es universal.
+
+El índice de Morán Global *(I)* puede tomar valores de entre 1 y -1. Los valores indican:
+* **I > 0** autocorrelación espacial positiva, cuando hay un patrón agrupado en clúster.
+* **I = 0** ausencia de autocorrelación, cuando hay un patrón aleatorio.
+* **I < 0** autocorrelación espacial negativa, cuando hay un patrón disperso.
