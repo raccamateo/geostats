@@ -311,14 +311,40 @@ Las medidas locales suelen estandarizarse para permitir comparaciones.
 Es un índice de correlación, ya que trabaja con la covarianza ponderada sobre la varianza de los pesos espaciales y cuya fórmula es:
 
 <center>
-![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/16.png){width=65%}
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/16.png){width=50%}
 </center>
 
- Dónde *N* es el número de unidades de análisis y *W* la suma de los pesos.
- 
- No se considera el valor de la unidad central, solo se interesa en la relación entre vecinos ya que cuando no existe el producto da 0. Esta medida depende del criterio de vecindad aplicado en cada caso particular, por lo que no es universal.
 
-El índice de Morán Global *(I)* puede tomar valores de entre 1 y -1. Los valores indican:
+Dónde *N* es el número de unidades de análisis y *W* la suma de los pesos.
+ 
+No se considera el valor de la unidad central, solo se interesa en la relación entre vecinos ya que cuando no existe el producto da 0. Esta medida depende del criterio de vecindad aplicado en cada caso particular, por lo que no es universal.
+
+El índice de Morán Global *(I)* puede tomar valores de entre 1 y -1 donde:
+
 * **I > 0** autocorrelación espacial positiva, cuando hay un patrón agrupado en clúster.
+
 * **I = 0** ausencia de autocorrelación, cuando hay un patrón aleatorio.
+
 * **I < 0** autocorrelación espacial negativa, cuando hay un patrón disperso.
+
+
+**Significación (pseudo-*****p*****)**
+
+Siempre planteamos la hipótesis nula *(H<sub>0</sub>)* de la siguiente manera: *I* es significativamente distinto de cero, lo que indicaría algún grado de correlación y que no hay azar espacial. 
+
+*p^* = 0.01 significa que hay un 1% de probabilidades de equivocarnos al rechazar *H<sub>0</sub>* o planteado de otra manera que la confianza al descatar la hipótesis nula es del 99%.
+ 
+Un método tradicional, *Z-score* y uno más actual, *Monte Carlo*:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/17.png){width=50%}
+</center> 
+
+
+En *Z score* se estandariza. *I* es el valor del índice, *E(I)* es el valor esperado del índice y *Var(I)* es la varianza. Cuando el valor de *Z(I)* se encuentra entre -1.96 y 1.96 se considera que hay autocorrelación significativa.
+
+Cuando usamos *Monte Carlo*, para calcular sobre la misma distribución de datos se dejan de lado los vecindarios. Se presta atención al número de valores que se obtienen y *N<sub>extreme</sub>* es el número de *I's* simulados que son más extremos que los *I* observados.
+
+
+**Diagramas de dispersión**
