@@ -8,12 +8,16 @@ output:
     toc_depth: 3
     toc_float: true
     theme: sandstone
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, echo=FALSE}
+library(knitr)
+```
 
 # Geoestadística
 
@@ -42,7 +46,7 @@ Todos los métodos de predicción local pueden ser vistos como algún tipo de pr
 
 
 <center>
-![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png){width=65%}
+![](https://raw.githubusercontent.com/raccamateo/geostats/main/0.png){width=60%}
 </center>
 
 
@@ -97,11 +101,10 @@ La proporción de áreas de intersección con los polígonos originales se usa p
 
 <center>
 ![Markluffel, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons](https://raw.githubusercontent.com/raccamateo/geostats/main/3.png){width=25%}
- </center>
+</center>
 
 
 Es también un interpolador exacto, por lo que no hay medida de error. Permite lograr gradientes suaves. Incorpora información sobre el vecindario pero no usa puntos lejanos, necesita que los datos no sean ruidosos, es decir que no funciona bien cuando hay muchas variaciones.
-
 
 ### Distancia Inversa Ponderada (IDW)
 
@@ -119,7 +122,7 @@ El valor a predecir se calcula usando una combinación lineal ponderada de los v
 <center>
 ![https://pro.arcgis.com/es/pro-app/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm](https://raw.githubusercontent.com/raccamateo/geostats/main/5.png){width=25%}
 </center>
-  
+
 
 Ahora vamos a la ecuación que nos permite calcular superficies usando IDW y a un gráfico de ejemplo sobre cómo se ajusta según puntos muestrales:
 
@@ -136,7 +139,6 @@ Para obtener mínimos y máximos a través del gradiente, necesitamos que los lu
 Es un interpolador exacto en el que la elección del exponente (β) es arbitraria. No se tiene en cuenta la configuración espacial de las muestras.
 
 Este método es usado cuando el conjunto de puntos muestrales es denso y captura la extensión de la variación de la superficie.
-  
 
 TERMINAR 
 
@@ -144,11 +146,13 @@ TERMINAR
 
 Se interpola localmente con ponlinomios usando puntos de valores conocidos. El objetivo es minimizar la curvatura general de la superficie a estimar. Es ampliamente usado para generar superficies con variaciones leves, como superficies de elevación o de concentraciones de contaminación.
 
+Los polinomios usados en este método suelen ser de grado 3 y dan lugar a las llamadas splines cúbicas.
+
 Los puntos de unión entre curvas son llamados nudos o knots. 
 
 Tipos de Spline:
 
-* ***Regularized o Regularizado***: el objetivo es lograr una superficie suave y las curvas toman valores que pueden estar fuera del rango de los datos de muestra.
+* ***Regularized o Regularizado***: el objetivo es lograr una superficie elástica, las curvas toman valores que pueden estar fuera del rango de los datos de muestra por lo que las curvas suelen lucir más agresivas.
  
  * ***Tension o de Tensión***: se busca controlar la rigidez de la superficie en función del caracter de lo que modelamos. Crea una superficie menos suave con valores más restringidos por el rango de datos de la muestra.
 
@@ -175,7 +179,7 @@ Kriging calcula la variación de una variable asumiendo que la media no tiene gr
 
 
 <center>
-![Diapositivas de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/9.png){width=50%}
+![Diapositivas de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/9.png){width=40%}
 </center>
 
 
@@ -185,6 +189,7 @@ El objetivo del semivariograma es mostrar que a partir de cierto valor de distan
 
 La distancia a la que el modelo se estabiliza se denomina **rango** o **range**. Los puntos muestrales separados por distancias más cortas que el rango están autocorrelacionadas espacialmente, mientras que los más alejados que el rango no lo están.
 
+
 El valor de variación máxima se llama **meseta** o **sill (C1)**.
 
 Los datos siempre pueden presentar errores o haber sido medidos con sesgo. El semivariograma muestra los valores máximos de distancia hasta donde se verifica la correlación espacial y hasta los que podemos interpolar.
@@ -192,21 +197,21 @@ Los datos siempre pueden presentar errores o haber sido medidos con sesgo. El se
 El uso de Kriging significa una investigación interactiva del comportamiento espacial de la variable de interés a través del análisis de semivariogramas. Nos permite identificar el mejor método de estimación para generar la superficie de salida.
 
 
-**Ventajas del Kriging:** 
+**Ventajas:** 
 * Nos brinda una superficie de error para las estimaciones.
 * Se pueden interpolar datos de variables con continuidad espacial desconocida.
 
-**Desventajas del Kriging:**
+**Desventajas:**
 * Las superficies generadas pueden ser excesivamente suaves.
 * Aunque estima la precisión, puede no reflejar con fidelidad  la distribución espacial del proceso, en especial cuando se esperan quiebres o discontinuidades.
 
 
-## Dependencia espacial y Autocorrelación
+# Dependencia espacial y Autocorrelación
 
 Los modelos de regresión se construyen sobre el supuesto de que los valores de la variable dependiente son intependientes. Las variables que muestran autocorrelación espacial violan este supuesto y los modelos con estas variables tienen sesgo e invalidez estadística ya que subestiman o sobreestiman la importancia de las relaciones entre variables.
 
 
-### Asociación espacial
+## Asociación espacial
 
 Describe cómo las localizaciones y sus atributos varían espacialmente. Involucra los conceptos de dependendencia espacial, interacción espacial (flujos de relaciones e interacciones) y agrupamiento espacial.
 
@@ -238,8 +243,7 @@ Cuando los lugares vecinos tienen valores muy deferentes, se dice que están dis
 Cuando el fenómeno se comporta de manera aleatoria y no se identifica un patrón definido espacialmente, se dice que no existe autocorrelación espacial. 
 
 
-### Estructura del vecindario
-
+## Estructura del vecindario
 
 La proximidad espacial de los lugares es capturada por una matriz de pesos espaciales que tiene dos criterios básicos: *distancia* y *continuidad física* o *adyacencia topológica*.
 
@@ -253,7 +257,7 @@ Otro criterio posible es ponderar vecinos de distinto orden.
 Es el más simple de encontrar y aplicar. Con un punto se define un radio de búsqueda (por lado o por diagonales) y se buscan vecinos. Un ejemplo es el siguiente:
 
 <center>
-![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/12.png){width=75%}
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/12.png){width=65%}
 </center>
 
 
@@ -264,7 +268,7 @@ Se considera vecinos de primer orden a los contiguos a nuestro punto central a p
 A continuación podemos ver los criterios de selección de vecinos por contigüidad:
 
 <center>
-![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/13.png)
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/13.png){width=35%}
 </center>
 
 En general, al trabajar con polígonos el criterio utilizado es el llamado reina o queen en el que se busca por anillos y se consideran todas las direcciones posibles de vecindad.
@@ -272,12 +276,12 @@ En general, al trabajar con polígonos el criterio utilizado es el llamado reina
 Difiere del criterio por distancia ya que no pondera todo lo que está dentro de un radio sino por niveles de proximidad (órdenes).
 
 
-### Matrices de pesos
+## Matrices de pesos
 
 Pueden utilizarse para representar, por ejemplo, vecindarios. Las unidades tienen que tener identificadores únicos.
 
 <center>
-![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/14.png){width=50%}
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/14.png){width=35%}
 </center>
 
 
@@ -285,7 +289,7 @@ La matriz es simétrica y su diagonal principal se conforma de ceros ya que cada
 
 Los pesos de las matrices pueden ser binarios o estandarizados. Un ejemplo de ambos casos: 
 <center>
-![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/15.png)
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/15.png){width=75%}
 </center>
 
 
@@ -313,6 +317,7 @@ Es un índice de correlación, ya que trabaja con la covarianza ponderada sobre 
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/16.png){width=50%}
 </center>
+
 
 
 Dónde *N* es el número de unidades de análisis y *W* la suma de los pesos.
@@ -348,3 +353,39 @@ Cuando usamos *Monte Carlo*, para calcular sobre la misma distribución de datos
 
 
 **Diagramas de dispersión**
+
+Grafican el valor promedio del vecindario vs el valor de cada variable en la unidad central, que es llamado lagged. La pendiente de la recta generada (slope) es igual al valor de *I de Morán*.
+
+<center>
+![Gimond, Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/img/MoranI_scatter_plot.png){width=50%}
+</center>
+
+
+**Correlograma de Morán**
+
+Este índicador global representa el índice de Morán a distintos ordenes de vecindarios o bandas de distancia.
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/18.png){width=50%}
+</center> 
+
+
+
+**C de Geary Global**
+
+En vez de trabajar con la covariación, compara el valor de la unidad central con el valor de cada vecino. Esto hace que sensible a la autocorrelación espacial local.
+
+Se calcula el cuadrado de las diferencias entre el valor central y el del vecino considerando el peso (*w*), y la fórmula es la siguiente:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/19.png){width=30%}
+</center>
+
+
+El índice C de Geary puede tomar valores de entre 0 y 2 (aunque a veces podemos encontrar excepciones en las que los valores sean superiores), donde:
+
+* **0 < C < 1** autocorrelación espacial positiva, cuando hay un patrón agrupado en clúster.
+
+* **C = 1** ausencia de autocorrelación, cuando hay un patrón aleatorio.
+
+* **1 < C < 2** autocorrelación espacial negativa, cuando hay un patrón disperso.
