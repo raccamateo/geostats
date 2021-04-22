@@ -8,15 +8,11 @@ output:
     toc_depth: 3
     toc_float: true
     theme: sandstone
-    fig_caption: true
+    fig_caption: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r, echo=FALSE}
-library(knitr)
 ```
 
 # Geoestadística
@@ -26,21 +22,26 @@ Ya que la geoestadística solo se limita a este enfoque, al abordar otros métod
 
 Esta pequeña guía se basa en Geostatistics for Environmental Scientists, de Richard Webster y Margaret A. Oliver (DOI:10.1002/9780470517277) y en apuntes de clases del posgrado en Big Data y Desarrollo Territorial de FLACSO Argentina (2020).
 
+
 ## Autocorrelación Espacial
 
 En general, cosas que están próximas son similares entre sí. Esto fue postulado por Fisher en 1935, al observar que lotes próximos tenían rendimientos más similares que aquellos que estaban alejados. Fue el primero en aplicar conceptos de autocorrelación espacial para la siembra de ensayos, aunque no se hablaba de desagregar por proximidad o si era por otros factores.
 
 En 1970, Tobler busca resolver problemas del crecimiento urbano en Detroit y retoma las ideas de Fisher para analizar la expansión en lugares urbanos próximos. La Primera Ley de Tobler postula que todo está relacionado con todo, pero que las cosas más cercanas están más relacionadas que las distantes.
 
+
 ## Espacialización
 
 Basado en los conceptos de la autocorrelación espacial, el proceso de Espaciaalización permite generar estructuras de datos espaciales con cobertura continua a partir de datos espacialmente discontinuos o discretos mediante interpolación espacial. Es decir, puntos aislados de dimensión cero son llevados a dos dimensiones.
+
 
 # Interpolación Espacial
 
 Es uno de los procesos de espacialización en el que se observa un fenómeno Z en un número limitado de lugares X (puntos muestreales o de observación/registro). Sirve para conocer el valor de una propiedad en cierta superficie. 
 
+
 Hay diferencias entre los principios de la estadística tradicional y la geoestadística. Mientras que el enfoque clásico utiliza muestreos aleatorios para estimar parámetros de la población, en geoestadística ya existen valores reales (lo que se mide u observa) que consideran e incorporan características y a su vez tienen aleatoriedad y cumplen con el principio de autocorrelación. Trata de inferir aquello que se desconoce en base a lo mencionado recién.
+
 
 Todos los métodos de predicción local pueden ser vistos como algún tipo de promedio ponderado donde:
 
@@ -60,9 +61,11 @@ Todos los métodos de predicción local pueden ser vistos como algún tipo de pr
  
  A continuación se explicarán los métodos más comunes.
  
+ 
 ### Polígonos de Voronoi o Thiessen
 
 Hay una serie *N* de puntos generadores *z* que dividen una región en *N* polígonos o teselas *V*, esto quiere decir que hay tantos polígonos como puntos generadores. 
+
 
 La división de la región es a través de bisectores perpendiculares (líneas) que se forman al calcular las distancias entre puntos. Estas particiones dividen el espacio entre puntos generadores, y como resultado el espacio interno de estos polígonos contiene todos los puntos cuya distancia al punto generador es menor que la distancia a cualquier otro punto externo.
 
@@ -74,7 +77,9 @@ La división de la región es a través de bisectores perpendiculares (líneas) 
 
 En este tipo de interpolación, todo lo que corresponde a un polígono toma el/los valor/es del punto generador. Los polígonos que comparten borde, son llamados *vecinos*. 
 
+
 Otra característica es que los polígonos llenan completamente el espacio sin superposición. Es un interpolador exacto, lo que quiere decir que no hay estimación de error y que no se usa información de lugares vecinos.
+
 
 ### Triangulación de Delaunay o Teselado de Dirichlet
 
@@ -92,6 +97,7 @@ Los triángulos no se superponen. Este método se usa para hacer interpolaciones
 
 Nos permite usar interpolación lineal para calcular la diferencia entre valores de puntos en el espacio, y como se conoce el ángulo de inclinación se pueden espacializar datos de altura para generar curvas de nivel.
 
+
 ### Vecinos Naturales
 
 Es una variante de Voronoi. Sobre un teselado se inserta un lugar a predecir *x0* y se recalcula el polígono. Esto quita arbitrareidad.
@@ -105,6 +111,7 @@ La proporción de áreas de intersección con los polígonos originales se usa p
 
 
 Es también un interpolador exacto, por lo que no hay medida de error. Permite lograr gradientes suaves. Incorpora información sobre el vecindario pero no usa puntos lejanos, necesita que los datos no sean ruidosos, es decir que no funciona bien cuando hay muchas variaciones.
+
 
 ### Distancia Inversa Ponderada (IDW)
 
@@ -141,6 +148,7 @@ Es un interpolador exacto en el que la elección del exponente (β) es arbitrari
 Este método es usado cuando el conjunto de puntos muestrales es denso y captura la extensión de la variación de la superficie.
 
 TERMINAR 
+
 
 ### Splines o curvas adaptativas
 
@@ -193,6 +201,7 @@ La distancia a la que el modelo se estabiliza se denomina **rango** o **range**.
 El valor de variación máxima se llama **meseta** o **sill (C1)**.
 
 Los datos siempre pueden presentar errores o haber sido medidos con sesgo. El semivariograma muestra los valores máximos de distancia hasta donde se verifica la correlación espacial y hasta los que podemos interpolar.
+
 
 El uso de Kriging significa una investigación interactiva del comportamiento espacial de la variable de interés a través del análisis de semivariogramas. Nos permite identificar el mejor método de estimación para generar la superficie de salida.
 
@@ -293,21 +302,14 @@ Los pesos de las matrices pueden ser binarios o estandarizados. Un ejemplo de am
 </center>
 
 
-## Medidas de autocorrelación espacial
+# Medidas de autocorrelación espacial
 
 Las medidas de autocorrelación espacial pueden ser globales o locales (LISA). A continuación vamos a verlas en profundidad.
 
 
-### Globales
+## Globales
 
 Las medidas globales no consideran la heterogeneidad espacial, esto quiere decir que nos brindan un único valor que define si hay autocorrelación o no, sin detalles. Asume que un mismo proceso o patrón se da en toda el área. No especifica dónde se encuentra la similitud o disimilitud de valores.
-
-
-### Locales (LISA)
-
-Consideran la heterogeneidad espacial, asume que puede haber patrones o procesos diferentes en distintos lugares un mismo área.
-Nos permite contar con medidas de variación local y se asignan medidas de a utocorrelación a cada unidad de análisis. Podemos identificar subzonas en las que se presenta agrupamiento o dispersión en relación a los vecinos.
-Las medidas locales suelen estandarizarse para permitir comparaciones.
 
 
 ### Índice de Morán - I Global
@@ -317,7 +319,6 @@ Es un índice de correlación, ya que trabaja con la covarianza ponderada sobre 
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/16.png){width=50%}
 </center>
-
 
 
 Dónde *N* es el número de unidades de análisis y *W* la suma de los pesos.
@@ -371,7 +372,7 @@ Este índicador global representa el índice de Morán a distintos ordenes de ve
 
 
 
-**C de Geary Global**
+### C de Geary Global
 
 En vez de trabajar con la covariación, compara el valor de la unidad central con el valor de cada vecino. Esto hace que sensible a la autocorrelación espacial local.
 
@@ -389,3 +390,20 @@ El índice C de Geary puede tomar valores de entre 0 y 2 (aunque a veces podemos
 * **C = 1** ausencia de autocorrelación, cuando hay un patrón aleatorio.
 
 * **1 < C < 2** autocorrelación espacial negativa, cuando hay un patrón disperso.
+
+
+## Indicadores Locales de Asociación Espacial (LISA)
+
+Consideran la heterogeneidad espacial, asumen que puede haber patrones o procesos diferentes en distintos lugares un mismo área.
+
+Nos permiten contar con medidas de variación local y se asignan medidas de autocorrelación a cada unidad de análisis. Podemos identificar subzonas en las que se presenta agrupamiento o dispersión en relación a los vecinos.
+
+Las medidas locales suelen estandarizarse para permitir comparaciones.
+
+Son desagregaciones espaciales de los estadísticos globales en las que cada unidad de análisis tiene sus medidas de autocorrelación y pueden mapearse. Cada índice tiene su test estadístico y podemos identificar cuales son significativos y qué tipo de relaciones hay.
+
+
+### Interpretación de LISA
+
+Nos permiten mapear unidades con autocorrelación espacial significativa, hacer análisis de hot spots e identificar outliers.
+
