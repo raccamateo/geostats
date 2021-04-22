@@ -402,8 +402,23 @@ Las medidas locales suelen estandarizarse para permitir comparaciones.
 
 Son desagregaciones espaciales de los estadísticos globales en las que cada unidad de análisis tiene sus medidas de autocorrelación y pueden mapearse. Cada índice tiene su test estadístico y podemos identificar cuales son significativos y qué tipo de relaciones hay.
 
-
-### Interpretación de LISA
-
 Nos permiten mapear unidades con autocorrelación espacial significativa, hacer análisis de hot spots e identificar outliers.
+
+
+### I de Moran Local
+
+Como en el global, el I de Morán local toma valores de entre 1 y -1 y representa el grado de correlación de una unidad territorial con sus unidades vecinas.
+
+El índice identifica unidades territoriales donde valores de análisis altos o bajos se agrupan espacialmente, y también unidades territoriales con valores distintos a los de las vecinas. Se pueden reconocer cinco tipos de conglomerados espaciales:
+
+* **alto-alto**: cuando una unidad territorial tiene un valor superior al promedio y sus vecinas también se encuentran sobre la media. También se los llama conglomerados calientes o *hot spots*.
+
+* **bajo-bajo**: cuando una unidad territorial tiene un valor de análisis inferior al promedio y sus vecinos también. Se denominan conglomerados fríos o *cold spots*.
+
+* **alto-bajo**: cuando una unidad territorial tiene un valor alto y está rodeada vecinos con valores que se encuentran debajo de la media.
+
+* **bajo-alto**: cuando una unidad territorial tiene un valor de análisis bajo y está rodeada por áreas vecinas con valores sobre la media.
+
+* **relación no significativa**: cuando hay unidades territoriales donde el valor de análisis de la variable de interés no se relaciona significativamente con los valores vecinos.
+
 
