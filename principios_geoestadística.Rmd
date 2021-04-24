@@ -422,3 +422,32 @@ El índice identifica unidades territoriales donde valores de análisis altos o 
 * **relación no significativa**: cuando hay unidades territoriales donde el valor de análisis de la variable de interés no se relaciona significativamente con los valores vecinos.
 
 
+Podemos ver un ejemplo en el que hay correlación espacial positiva y en el que encontramos los cuatro cuadrantes correspondientes a los 4 primeros tipos de conglomerados acá:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/20.png){width=50%}
+</center>
+
+
+### Gi* de Getis-Ord local
+
+Se usa para medir el grado de asociación local de los datos de tipo punto o área ponderados e identidicar cómo se agrupan los valores extremos a través de clústeres de medidas altas y bajas. Dejan de lado valores atípicos.
+
+
+# Glosario de términos básicos
+
+Acá vamos a desarrollar algunos conceptos básicos al momento de trabajar con estadística espacial.
+
+
+## Proceso puntual
+
+Hace referencia a un mecanismo o fenómeno aleatorio que genera un conjunto de eventos finitos sobre un área o región de estudio. Las localizaciones en las que se evidencia este proceso son representadas por *puntos* y las observaciones se llaman *ocurrencias* (cuando representan objetos) o *eventos* (cuando representan algo en un momento determinado).
+
+
+## Patrones de puntos
+
+Son data sets que contienen la ubicación de los objetos o eventos de un proceso puntual en un espacio o area determinada .
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/21.png){width=50%}
+</center>
