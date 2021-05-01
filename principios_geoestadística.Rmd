@@ -508,3 +508,34 @@ Se refiere a que las funciones de intensidad de un proceso no varían cuando hay
 
 Se refiere a que las funciones de intensidad de un proceso no varían cuando hay rotaciones, es decir que se mantienen homogéneos ante cambios de dirección.
 
+
+## Intensidad de segundo orden *λ(s,u)*
+
+Son estadísticas locales que resumen el patrón de puntos de un vecindario. Representa el número esperado de puntos que se dan de manera conjunta en dos localidades (*s* y *u*) de estudio. La fórmula es la siguiente:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/25.png){width=20%}
+</center>
+
+Dónde *λ(s,u)* es la intensidad de segundo orden de un proceso entre las localizaciones *s* y *u*, *ds* es una región alrededor del punto *s*, *du* es una región alrededor del punto *u*. *N(ds)* es el número de eventos observados en la región *ds* y *N(du)* es el número de eventos observados en la región *du*.
+
+El proceso puntual mas simple es Poisson, que no es el más útil pero es el tomado como referencia para las pruebas de aleatoriedad espacial completa.
+
+
+### Proceso homogéneo de Poisson
+
+Existe un valor *λ* > 0 que para cualquier región *A* con *N* eventos, estos siguen una distribución uniforme sobre esta región.
+
+Un proceso cumple con la homogeneidad de Poisson sí:
+
+* Los eventos son espacialmente independientes entre sí.
+
+* La probabilidad de que aparezca un evento en una localización concreta es la misma para cualquier localización dentro del área de estudio.
+
+* Los patrones se rigen por la aleatoriedad espacial completa.
+
+
+# Estudio de procesos puntuales
+
+Nos sirven para adquirir información sobre el proceso que generadó cierto/s patrón/es e intentar entender y modelar para poder usarlo/s de distintas maneras. Se siguen una serie te pasos o etapas:
+
