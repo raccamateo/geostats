@@ -451,3 +451,33 @@ Son data sets que contienen la ubicación de los objetos o eventos de un proceso
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/21.png){width=50%}
 </center>
+
+
+## Ventana o área de estudio
+
+Las ventanas o áreas de estudio definen los límites del espacio en el que vamos a observar/analizar procesos y patrones. Nos permiten contabilizar los patrones de puntos y calcular los estadíscos de resumen.
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/22.png){width=30%}
+</center>
+
+
+## Efectos de borde
+
+Puede suceder que haya eventos de los que no tenemos noticia (no los consideramos) en el exterior nuestra ventana o área de estudio y que pueden sesgar nuestra interpretación del patrón. En estos casos resulta útil aplicar técnicas que consideran el efecto de los bordes o aristas. Generalmente, consideran un área con un radio determinado como se puede ver en el siguiente ejemplo:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/23.png){width=20%}
+</center>
+
+
+# Intensidad
+
+Hace referencia a la concentración espacial de un fenómeno. Se ,odem a través de estadísticos, y algunas formas de medir intensidad son: a través de la densidad, es decir el número de puntos o la abundancia por unidad de área, con el número de ocurrencias sobre el total y a través de la abundacia local sobre la abundancia total.
+
+
+## Intensidad de primer orden *λ(s)*
+
+Se utilizan estadísticos globales que resumen el patrón de puntos para toda el área de estudio.
+
+*λ(s)* representa el número de puntos esperados en cada localización de estudio por unidad de área. La fórmula es la siguiente:
