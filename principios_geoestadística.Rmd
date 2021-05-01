@@ -481,3 +481,30 @@ Hace referencia a la concentración espacial de un fenómeno. Se ,odem a través
 Se utilizan estadísticos globales que resumen el patrón de puntos para toda el área de estudio.
 
 *λ(s)* representa el número de puntos esperados en cada localización de estudio por unidad de área. La fórmula es la siguiente:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/24.png){width=20%}
+</center>
+
+Dónde *λ(s)* es la intensidad de un proceso en la localización *s*, *ds* es una región alrededor del punto *s* y *N(ds)* es el número de eventos observados en esta región.
+
+
+### Proceso homogéneo
+
+Es cuando el número de casos esperado es constante (en el espacio), es decir que no varía al cambiar de lugar. En estos casos la covariación entre dos puntos depende únicamente de su posición relativa. 
+
+
+### Proceso heterogéneo o inhomogéneo
+
+Es lo opuesto al caso anterior. En los procesos heterogéneos la intensidad de las ocurrencias cambia con la localización.
+
+
+### Estacionariedad
+
+Se refiere a que las funciones de intensidad de un proceso no varían cuando hay traslaciones, es decir que se mantienen homogéneos.
+
+### Isotropía
+
+Se refiere a que las funciones de intensidad de un proceso no varían cuando hay rotaciones, es decir que se mantienen homogéneos ante cambios de dirección.
+
