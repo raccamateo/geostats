@@ -539,3 +539,40 @@ Un proceso cumple con la homogeneidad de Poisson sí:
 
 Nos sirven para adquirir información sobre el proceso que generadó cierto/s patrón/es e intentar entender y modelar para poder usarlo/s de distintas maneras. Se siguen una serie te pasos o etapas:
 
+
+## Búsqueda y preprocesamiento de datos
+
+El primer paso es la obtención de datos. En algunos casos estos datos deben ser entrados en el sistema por diferencias de formato, ya que muchas veces se almacenan de manera física y no virtual. En otros casos están de manera virtual pero deben ser ajustados o adaptados.
+
+En general, los datos son ocurrencias o eventos que se pueden representar como puntos geoespaciales. No se recomienda usarlos agrupados, salvo que el numero de unidades sea muy grande.
+
+Antes empezar a trabajar es clave ordenar los datos y preprocesarlos para que el flujo de trabajo sea más efectivo y llevadero. 
+
+Debemos definir una ventana o región de estudio y seleccionar atributos (o marcas) a evaluar. 
+
+También es útil encontrar las covariables, que son variables que sirven como explicativas y nos permiten entender mejor la relación entre los datos. Para conocer el efecto de las covariables todas las observaciones deben tener valores de la covariable. 
+
+También debemos conocer dónde el patrón no fue observado, para lo que es necesario incluir las localizaciones de fondo o de no-ocurrencia. Esta información se almacena en matrices y queda representada de la siguiente manera:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/26.png){width=40%}
+</center>
+
+
+Por otro lado, las marcas o atributos pueden ser: categóricas, continuas o multivariadas.
+
+
+## Estimación o cálculo de intensidad
+
+A partir de los puntos, estimamos o calculamos la intensidad para conocer si el proceso es homogéneo o no.
+
+Se compara un patrón de puntos con otro generado bajo un modelo nulo (es decir, se simula) y se calcula o estima una intensidad de primer o segundo orden.
+
+
+## Test de hipótesis
+
+Se realiza una prueba de hipótesis sobre el modelo nulo, como por ejemplo:
+*H<sub>0</sub>* = es un proceso de Poisson homogéneo 
+*H<sub>1</sub>* = es un proceso de Poisson no homogéneo
+
