@@ -588,3 +588,28 @@ Se realiza una prueba de hipótesis sobre el modelo nulo, como por ejemplo:
 
 
 Podemos realizar un test de homogeneidad asumiendo independencia con chi-cuadrado *χ<sup>2</sup>*, que sigue la siguiente fórmula:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/28.png){width=20%}
+</center>
+
+
+Dónde *χ<sup>2</sup>* es igual a la sumatoria de las diferencias entre valores observados y esperados al cuadrado sobre los valores esperados.
+
+Siguiendo con el ejemplo de arriba, si calculamos chi-cuadrado vamos a ver que el valor esperado por cuadrante es 7.9 y el valor de chi para cada cuadrante es:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/29.png){width=20%}
+</center>
+
+
+A nivel general, el test de chi-cuadrado da como resultado:
+
+
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/30.png){width=30%}
+
+
+Cómo el p-value es 0.4 no podemos rechazar la hipótesis nula *(H<sub>0</sub>)*.
+
