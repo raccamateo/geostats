@@ -576,3 +576,15 @@ Se realiza una prueba de hipótesis sobre el modelo nulo, como por ejemplo:
 *H<sub>0</sub>* = es un proceso de Poisson homogéneo 
 *H<sub>1</sub>* = es un proceso de Poisson no homogéneo
 
+
+### Estadísticos de primer orden
+
+* Conteo por cuadrantes: se calcula *λ*, cuyo valor es el número promedio de puntos esperados por (sub)unidad de área dentro de un área o ventana *W*
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/27.png){width=40%}
+</center>
+
+
+Podemos realizar un test de homogeneidad asumiendo independencia con chi-cuadrado *χ<sup>2</sup>*, que sigue la siguiente fórmula:
