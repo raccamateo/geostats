@@ -613,3 +613,27 @@ A nivel general, el test de chi-cuadrado da como resultado:
 
 Cómo el p-value es 0.4 no podemos rechazar la hipótesis nula *(H<sub>0</sub>)*.
 
+
+También se desarrollaron otros métodos similares para evaluar los conteos: 
+
+* Índice de de Grey-Smith I o de dispersión de conteos en cuadrantes, también conocido como razón de varianza media
+
+* Índice M de Morisita , que es similar a un *χ<sup>2</sup>*
+
+* Índice de David—Moore,
+
+* Índice de frecuencia de agregados de Douglas
+
+
+### Estadísticos de segundo orden
+
+* Función *K* de Ripley
+
+La fórmula es la siguiente:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/31.png){width=30%}
+</center>
+
+Dónde *r* es el radio de análisis, *A* es la región o área de estudio, *n* el número de eventos u ocurrencuas, *d<sub>ij</sub>* es la distancia entre el elemento *i* y el *j* (que vale 1 sí es menor o igual a *r* y 0 si es mayor) y *w<sub>ij</sub>* que es el factor de corrección.
+
