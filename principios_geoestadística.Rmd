@@ -637,3 +637,24 @@ La fórmula es la siguiente:
 
 Dónde *r* es el radio de análisis, *A* es la región o área de estudio, *n* el número de eventos u ocurrencuas, *d<sub>ij</sub>* es la distancia entre el elemento *i* y el *j* (que vale 1 sí es menor o igual a *r* y 0 si es mayor) y *w<sub>ij</sub>* que es el factor de corrección.
 
+
+La función K de Ripley es una curva de distribución acumulada que da el número promedio de puntos que están dentro de un radio *r* en relación a un punto de análisis. Este punto funciona como punto central a partir del cual el radio se extiende progresivamente. En esta función se corrige por efectos de borde y se estandariza dividiendo por la intensidad.
+
+La representación gráfica de la función y cómo funciona (a partir del punto central, en rojo) es la siguiente:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/32.png){width=20%}
+</center>
+
+
+*Ahora, ¿cómo se evalúa la hipótesis nula?*
+
+Necesitamos conocer el intervalo de aceptación de la función esperada y compararla con el intervalo de confianza de la función observada.
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/33.png){width=40%}
+</center>
+
+La función *K* de Ripley describe a qué distancia se encuentran nuevos eventos a medida que se aleja del primer evento encontrado.
+
+Vamos a un ejemplo:
