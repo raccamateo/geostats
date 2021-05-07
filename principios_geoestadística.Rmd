@@ -680,3 +680,39 @@ Los efectos de borde se utilizan cuando tenemos puntos cercanos a los bordes y q
 
 
 Efectos de borde según el tamaño del dataset:
+
+* Pequeño (menor a 1000 puntos): se utiliza corrección isotrópica que consiste en análizar lo que pasa en torno a un radio circular de un punto. Consiste en simular puntos cuando un radio alcanza un borde. 
+
+* Mediano (entre 1000 y 10000 puntos): se utiliza la técnica de erosión, que consiste en correr los límites de los bordes hacia adentro para que al alcanzarlos podamos trabajar con los valores que quedan fuera (pero que ahora conocemos).
+
+* Grande (más de 10000 puntos): en estos casos no resulta necesario corregir por bordes.
+
+
+Acá podemos ver gráficamente cómo funciona cada efecto:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/36.png){width=30%}
+</center>
+ 
+
+* Función L de Besag
+Es más simple de interpretar que la K de Ripley ya que está centrada. 
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/37.png){width=30%}
+</center>
+
+Muchas veces se rota la función para que el 0 sea horizontal y nos permita evaluar mejor lo que está por encima y por debajo de 0. Acá podemos ver algunos ejemplos:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/38.png){width=35%}
+</center>
+
+
+Los ejemplos nos ayudan a observar que según las distancias que evaluemos, en algunos casos nuestros datos pueden resultar agrupados (en clústeres) o dispersos.
+
+
+* Función g o correlación apareada O-ring
+
+Es la función de distribución de la distancia desde un evento concreto hasta su evento más próximo dentro de un radio (**r**). Se utiliza para individualizar escalas relevantes del patrón de puntos y calcula la pendiente de la función **K'** dividida por la circunferencia de radio (**r**).
