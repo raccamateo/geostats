@@ -716,3 +716,19 @@ Los ejemplos nos ayudan a observar que según las distancias que evaluemos, en a
 * Función g o correlación apareada O-ring
 
 Es la función de distribución de la distancia desde un evento concreto hasta su evento más próximo dentro de un radio (**r**). Se utiliza para individualizar escalas relevantes del patrón de puntos y calcula la pendiente de la función **K'** dividida por la circunferencia de radio (**r**).
+
+
+La función es la siguiente:
+
+
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/39.png){width=15%}
+
+
+Los resultados se analizan con este criterio:
+
+Sí g(r) > 1 significa que contamos con valores agregados
+Sí g(r) < 1 significa que contamos con valores regulares
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/40.png){width=20%}
+</center>
