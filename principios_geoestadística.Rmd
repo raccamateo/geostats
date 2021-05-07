@@ -658,3 +658,25 @@ Necesitamos conocer el intervalo de aceptación de la función esperada y compar
 La función *K* de Ripley describe a qué distancia se encuentran nuevos eventos a medida que se aleja del primer evento encontrado.
 
 Vamos a un ejemplo:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/34.png){width=30%}
+</center>
+
+Dónde en rojo aparece el patrón de datos agrupado (clusters) y en azul el de datos dispersos mientras que las líneas corresponden al azar (datos aleatorios).
+
+Para repasar: aceptamos la hipótesis nula si nos encontramos dentro del intervalo de confianza, es decir si nuestros datos son aleatorios. Si estamos por encima del intervalo de confianza nuestros datos son agrupados y si estamos por debajo son dispersos.
+
+
+*Efectos de borde para K de Ripley* 
+
+Los efectos de borde se utilizan cuando tenemos puntos cercanos a los bordes y queremos compensar la pérdida de puntos que los bordes generan.
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/35.png){width=30%}
+</center>
+
+
+Efectos de borde según el tamaño del dataset:
