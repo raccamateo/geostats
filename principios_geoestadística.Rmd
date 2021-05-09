@@ -732,3 +732,24 @@ Sí g(r) < 1 significa que contamos con valores regulares
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/40.png){width=20%}
 </center>
+
+
+Ahora, si la función empírica es mayor a la teórica las distancias al vecino mas cercano en el patrón son mas cortas en comparación con un proceso de Poisson homogéneo (es decir que se concentran). Si la función empírica es menor que la teórica, las distancias al vecino mas cercano son mayores y los puntos se encuentran más dispersos.
+
+
+Si graficamos, esto nos va a servir para entender cómo se distribuyen los puntos en relación al radio.
+
+
+Un ejemplo:
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/41.png){width=25%}
+</center>
+
+
+Si además calculamos el intervalo de confianza, nuestro gráfico y nuestros resultados cambian. Los puntos se calculan de extremo a extremo y la curva de aceptación tiende a ser mayor al principio (cuando el radio es más pequeño) y suele disminuir a medida que el radio se hace mayor y los puntos se alejan.
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/42.png){width=30%}
+</center>
