@@ -753,3 +753,27 @@ Si además calculamos el intervalo de confianza, nuestro gráfico y nuestros res
 <center>
 ![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/42.png){width=30%}
 </center>
+
+
+* Función F
+
+Se define como la función de distribución de la distancia de cualquier punto del área de estudio a su evento mas próximo. Sirve para encontrar clústeres de puntos agrupados y distribuciones aleatorias.
+
+
+La función es la siguiente:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/43.png){width=20%}
+</center>
+
+
+El eje x (*r*) indica la distancia a la que ocurre el mayor porcentaje de eventos a partir de un punto cualquiera del área de estudio.
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/44.png){width=20%}
+</center>
+
+
+* Función J
