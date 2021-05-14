@@ -777,3 +777,25 @@ El eje x (*r*) indica la distancia a la que ocurre el mayor porcentaje de evento
 
 
 * Función J
+
+
+La función *J* se basa en el principio de que para todo proceso homogéneo de Poisson se tiene que verificar que:
+
+
+*F(r)* = *G(r)* para todo *r*
+
+
+La fórmula es la siguiente:
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/45.png){width=30%}
+</center>
+
+
+Dónde:
+
+* *J(R)* < 1 indica agregación y agrupamiento
+
+* *J(R)* > 1 indica regularidad y dispersión.
+
