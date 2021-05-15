@@ -815,4 +815,31 @@ variables explican el patrón. Sino, tenemos que encontrar la mejor manera de in
  
 ## Estimar función de intensidad
 
-Si los datos están agrupados, este es el próximo paso.
+
+
+Si los datos están agrupados y no siguen un patrón aleatorio completo, este es el próximo paso.
+
+
+### Estadísticos de primer orden
+
+
+* Intensidad Kernel: es una probabilidad de densidad isotrópica gaussiana (distribución normal) que calcula la densidad de las ocurrencias alrededor de cada celda ráster de salida.
+
+
+Dónde:
+
+- *K* es la función kernel
+
+- *h* > 0 conocido como el radio de búsqueda (y también como ancho de parámetro de ventana, bandwidth y/o sigma) es un parametro de suavizado. Cuando los valores de *h* son pequeños producen superficies irregulares y cuando son demasiado grandes el suavizado puede resultar excesivo.
+
+
+<center>
+![Material de clase](https://raw.githubusercontent.com/raccamateo/geostats/main/46.png){width=30%}
+</center>
+
+
+La Intensidad Kernel ajusta una superficie curva uniforme sobre cada punto. El valor de superficie es más alto en la ubicación del punto y disminuye a medida que aumenta la distancia desde el punto. Alcanza el valor cero en la distancia *h*.
+
+
+El volumen debajo de la superficie de la curva es igual a 1. Para calcular la densidad de cada celda ráster de salida se agregan los valores de todas las superficies de kernel donde se superponen con el centro de una celda.
+
