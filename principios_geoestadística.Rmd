@@ -799,3 +799,20 @@ Dónde:
 
 * *J(R)* > 1 indica regularidad y dispersión.
 
+
+## ¿Qué hacemos después del análisis de patrones de puntos?
+
+
+* Búsqueda o modelado con variables que explican el proceso: si es aleatorio podemos usar una regresión cómun para encontrar qué
+variables explican el patrón. Sino, tenemos que encontrar la mejor manera de incorporar la autocorrelación o dependencia espacial para dar con las variables explicativas.
+
+* Caracterizar el proceso puntual e interpretarlo.
+
+* Optimizar el modelo de distribución espacial de la intensidad para análisis posteriores.
+
+* Usar distancias apropiadas para: interpolar los valores de ocurrencia suavizados (smooth) y/o generar grillas para acumular observaciones 
+
+ 
+## Estimar función de intensidad
+
+Si los datos están agrupados, este es el próximo paso.
